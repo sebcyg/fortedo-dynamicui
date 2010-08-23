@@ -9,7 +9,7 @@ Public Class ElementsModule
 
     Public Overrides Sub Load()
         Debug.Print("Check")
-        For Each fileInfo In My.Computer.FileSystem.FindInFiles("Elements", ".dll", True, FileIO.SearchOption.SearchAllSubDirectories)
+        For Each fileInfo In My.Computer.FileSystem.FindInFiles("Elements", "Elements.dll", True, FileIO.SearchOption.SearchAllSubDirectories)
             Dim ass = Assembly.LoadFrom(fileInfo)
             Dim namespaces As New Dictionary(Of String, String)
             For Each attr In ass.Attributes(Of XmlNamespaceAttribute)()
