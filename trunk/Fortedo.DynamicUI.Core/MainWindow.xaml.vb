@@ -11,8 +11,6 @@ Class MainWindow
 
         Dim kernel = New StandardKernel(New ElementsModule)
 
-        'kernel.Load("Elements/*.dll")
-
         Dim xel = XElement.Load("E:\Documents\Work\Fortedo\DynamicUI\Fortedo.DynamicUI\Fortedo.DynamicUI.Core\Definition.xml")
         Dim item As IDynamicElement = kernel.Get(Of IDynamicElement)(xel.Name.ToString())
         item.SetDefinition(xel)
