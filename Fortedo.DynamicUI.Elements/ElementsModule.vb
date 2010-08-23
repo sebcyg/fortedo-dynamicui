@@ -9,12 +9,22 @@ Public Class ElementsModule
 
     Public Overrides Sub Load()
         Debug.Print("Check")
-        Dim types = Me.GetType().Assembly.TypesWith(Of DynamicElementAttribute)()
+        For Each fileInfo In My.Computer.FileSystem.FindInFiles("Elements", ".dll", True, FileIO.SearchOption.SearchAllSubDirectories)
+            Debug.Print(fileInfo)
+        Next
+        Dim namespaces As New Dictionary(Of String, String)
+        Dim ass = Me.GetType().Assembly
+        For Each attr In ass.Attributes(Of XmlNamespaceAttribute)()
+            For Each el In attr.ClrNamespaces
+                namespaces.Add(el, attr.XmlNamespace)
+            Next
+        Next
+        Dim types = ass.TypesWith(Of DynamicElementAttribute)()
         Dim name As String
         For Each t In types
             name = t.Attribute(Of DynamicElementAttribute)().Name
             name = If(name, t.Name.Replace("Element", ""))
-            name = "{http://schemas.fortedo.com/dynamicui/elements}" & name
+            name = "{" & namespaces(t.Namespace) & "}" & name
             Bind(Of IDynamicElement).To(t).Named(name)
             Debug.Print(name)
         Next
