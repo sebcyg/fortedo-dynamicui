@@ -1,6 +1,6 @@
 ﻿Imports Fortedo.DynamicUI.Shared
 
-<DynamicElement()>
+<DynamicElement(View:=GetType(Views.DefinitionView))>
 Public Class DefinitionElement
     Inherits CollectionElementBase
 

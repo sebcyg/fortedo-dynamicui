@@ -1,6 +1,6 @@
 ﻿Imports Fortedo.DynamicUI.Shared
 
-<DynamicElement()>
+<DynamicElement(View:=GetType(Views.TextInputView))>
 Public Class TextInputElement
     Inherits DynamicElementBase
 End Class

@@ -1,7 +1,12 @@
 ﻿Imports System.Xml.XPath.Extensions
+Imports Ninject
+Imports Ninject.Parameters
 
 Public MustInherit Class DynamicElementBase
     Implements IDynamicElement
+
+    <Inject()>
+    Public Property Kernel As IKernel
 
     Private _context As Object
 
@@ -22,7 +27,7 @@ Public MustInherit Class DynamicElementBase
                 Else
                     _context = result
                 End If
-                End If
+            End If
         End Set
     End Property
 
@@ -39,4 +44,16 @@ Public MustInherit Class DynamicElementBase
     Public Overridable Function GetData() As System.Xml.Linq.XElement Implements IDynamicElement.GetData
         Return New XElement(Name)
     End Function
+
+    Private _view As IDynamicView
+
+    Public ReadOnly Property View() As Object Implements IDynamicElement.View
+        Get
+            If _view Is Nothing Then
+                _view = Kernel.TryGet(Of IDynamicView)(Me.GetType().FullName, New PropertyValue("DataContext", Me))
+            End If
+            Return _view
+        End Get
+    End Property
+
 End Class

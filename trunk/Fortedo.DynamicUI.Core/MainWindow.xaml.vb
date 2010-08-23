@@ -15,5 +15,6 @@ Class MainWindow
         Dim item As IDynamicElement = kernel.Get(Of IDynamicElement)(xel.Name.ToString())
         item.SetDefinition(xel)
         item.Context = el
+        uxMainControl.Content = item.View
     End Sub
 End Class

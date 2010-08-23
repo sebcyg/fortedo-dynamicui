@@ -1,10 +1,7 @@
 ﻿Imports Ninject
 
-Public Class CollectionElementBase
+Public MustInherit Class CollectionElementBase
     Inherits DynamicElementBase
-
-    <Inject()>
-    Public Property Kernel As IKernel
 
     Private _items As List(Of IDynamicElement)
 

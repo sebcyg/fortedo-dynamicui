@@ -20,10 +20,14 @@ Public Class ElementsModule
             Dim types = ass.TypesWith(Of DynamicElementAttribute)()
             Dim name As String
             For Each t In types
-                name = t.Attribute(Of DynamicElementAttribute)().Name
+                Dim attr = t.Attribute(Of DynamicElementAttribute)()
+                name = attr.Name
                 name = If(name, t.Name.Replace("Element", ""))
                 name = "{" & namespaces(t.Namespace) & "}" & name
                 Bind(Of IDynamicElement).To(t).Named(name)
+                If attr.View IsNot Nothing Then
+                    Bind(Of IDynamicView).To(attr.View).Named(t.FullName)
+                End If
                 Debug.Print(name)
             Next
         Next
