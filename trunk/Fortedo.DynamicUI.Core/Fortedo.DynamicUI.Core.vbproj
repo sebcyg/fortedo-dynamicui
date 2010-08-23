@@ -158,9 +158,6 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="XSLTFile1.xslt" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="lib\Fasterflect.dll" />
     <Content Include="lib\Ninject.dll" />
     <Resource Include="lib\Ninject.xml" />
