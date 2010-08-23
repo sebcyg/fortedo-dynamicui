@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defintion xmlns="http://schemas.fortedo.com/dynamicui/definition"
+           xmlns:e="http://schemas.fortedo.com/dynamicui/elements">
+  <e:TextInput Path="UserName/text()"
+               Label="Nazwa użytkownika"
+               TextLength="100"/>
+  <e:Tabs>
+    <e:Tab Path="CustomerInfo">
+      <e:TextInput Path="Street" Label="Ulica" TextLength="100"/>
+      <e:TextInput Path="City" Label="Miasto" TextLength="100"/>
+    </e:Tab>
+  </e:Tabs>
+</Defintion>
