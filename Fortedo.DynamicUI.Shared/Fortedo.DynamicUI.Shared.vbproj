@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Both|AnyCPU'">
+    <OutputPath>bin\Both\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Fasterflect, Version=2.0.3732.24338, Culture=neutral, PublicKeyToken=d3b50d974897f4b5, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
