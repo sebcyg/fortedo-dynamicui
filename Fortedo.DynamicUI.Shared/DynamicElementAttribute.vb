@@ -15,4 +15,6 @@
             Return _name
         End Get
     End Property
+
+    Public Property View() As Type
 End Class

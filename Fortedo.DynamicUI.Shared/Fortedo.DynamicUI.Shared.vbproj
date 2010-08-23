@@ -158,6 +158,7 @@
     <Compile Include="DynamicElementAttribute.vb" />
     <Compile Include="DynamicElementBase.vb" />
     <Compile Include="IDynamicElement.vb" />
+    <Compile Include="IDynamicView.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
