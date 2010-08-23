@@ -166,9 +166,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Elements\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Fortedo.DynamicUI.Shared\Fortedo.DynamicUI.Shared.vbproj">
       <Project>{F1094CA6-F3ED-4902-915B-9EECB7ACDBE0}</Project>
