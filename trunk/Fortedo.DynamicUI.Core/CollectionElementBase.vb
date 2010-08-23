@@ -3,15 +3,17 @@
 Public Class CollectionElementBase
     Inherits DynamicElementBase
 
+    <Inject()>
+    Public Property Kernel As IKernel
+
     Private _items As List(Of IDynamicElement)
 
     Public Overrides Sub SetDefinition(ByVal definition As System.Xml.Linq.XElement)
         MyBase.SetDefinition(definition)
         _items = New List(Of IDynamicElement)
-        Dim kernel = New StandardKernel(New ElementsModule)
 
         For Each element In definition.Elements
-            Dim item = kernel.Get(Of IDynamicElement)(element.Name.ToString())
+            Dim item = Kernel.Get(Of IDynamicElement)(element.Name.ToString())
             item.SetDefinition(element)
             _items.Add(item)
         Next

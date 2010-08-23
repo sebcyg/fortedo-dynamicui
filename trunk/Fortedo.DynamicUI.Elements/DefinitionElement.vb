@@ -1,4 +1,5 @@
 ﻿Namespace Elements
+    <DynamicElement()>
     Public Class DefinitionElement
         Inherits CollectionElementBase
 
