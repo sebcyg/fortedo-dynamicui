@@ -1,5 +1,4 @@
-﻿Imports Fasterflect
-Imports System.Xml.XPath.Extensions
+﻿Imports System.Xml.XPath.Extensions
 
 Public MustInherit Class DynamicElementBase
     Implements IDynamicElement
