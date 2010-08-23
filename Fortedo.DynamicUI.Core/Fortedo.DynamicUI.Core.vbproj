@@ -73,10 +73,6 @@
     <Compile Include="CollectionElementBase.vb" />
     <Compile Include="DynamicElementAttribute.vb" />
     <Compile Include="ElementsModule.vb" />
-    <Compile Include="Elements\DefinitionElement.vb" />
-    <Compile Include="Elements\TabElement.vb" />
-    <Compile Include="Elements\TabsElement.vb" />
-    <Compile Include="Elements\TextInputElement.vb" />
     <Compile Include="UserControl1.xaml.vb">
       <DependentUpon>UserControl1.xaml</DependentUpon>
     </Compile>
@@ -164,6 +160,8 @@
     <Content Include="lib\System.ComponentModel.Composition.dll" />
     <Resource Include="lib\Fasterflect.XML" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Elements\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
