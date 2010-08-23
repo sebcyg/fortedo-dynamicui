@@ -1,6 +1,6 @@
 ﻿Imports Fortedo.DynamicUI.Shared
 
-<DynamicElement()>
+<DynamicElement(View:=GetType(Views.TabView))>
 Public Class TabElement
     Inherits CollectionElementBase
 

@@ -4,9 +4,14 @@
                Label="Nazwa użytkownika"
                TextLength="100"/>
   <Tabs>
-    <Tab Path="CustomerInfo">
+    <Tab Path="CustomerInfo" Label="zakładka1">
+      <TextInput Path="Address/Street" Label="Ulica" TextLength="100"/>
+      <TextInput Path="City" Label="Miasto" TextLength="100"/>
+    </Tab>
+    <Tab Path="CustomerInfo" Label="zakładka2">
       <TextInput Path="Street" Label="Ulica" TextLength="100"/>
       <TextInput Path="City" Label="Miasto" TextLength="100"/>
+      <TextInput Path="Telephone" label="Telefon" TextLength="100"/>
     </Tab>
   </Tabs>
 </Definition>

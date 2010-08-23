@@ -148,6 +148,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DefinitionElement.vb" />
+    <Compile Include="Views\TabView.xaml.vb">
+      <DependentUpon>TabView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabsView.xaml.vb">
+      <DependentUpon>TabsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\DefinitionView.xaml.vb">
       <DependentUpon>DefinitionView.xaml</DependentUpon>
     </Compile>
@@ -203,6 +209,14 @@
     <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Views\TabView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\TabsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Views\DefinitionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
