@@ -23,7 +23,7 @@ Public MustInherit Class CollectionElementBase
         Set(ByVal value As Object)
             MyBase.Context = value
             For Each item In Items
-                item.Context = value
+                item.Context = MyBase.Context
             Next
         End Set
     End Property
