@@ -51,13 +51,6 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Both|AnyCPU'">
-    <OutputPath>bin\Both\</OutputPath>
-    <WarningsAsErrors>
-    </WarningsAsErrors>
-    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
-    <DocumentationFile>Fortedo.DynamicUI.Elements.xml</DocumentationFile>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Fasterflect">
       <HintPath>..\Fortedo.DynamicUI.Shared\lib\Fasterflect.dll</HintPath>
