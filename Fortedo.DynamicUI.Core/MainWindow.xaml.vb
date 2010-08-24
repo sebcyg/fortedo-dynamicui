@@ -2,6 +2,7 @@
 Imports System.Xml
 Imports Ninject
 Imports Fortedo.DynamicUI.Shared
+Imports Ninject.Parameters
 
 Class MainWindow
 

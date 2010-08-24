@@ -1,4 +1,5 @@
 ﻿Imports Ninject
+Imports Ninject.Parameters
 
 Public MustInherit Class CollectionElementBase
     Inherits DynamicElementBase
@@ -33,4 +34,5 @@ Public MustInherit Class CollectionElementBase
             Return _items
         End Get
     End Property
+
 End Class
