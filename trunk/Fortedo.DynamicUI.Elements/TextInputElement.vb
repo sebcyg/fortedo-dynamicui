@@ -23,4 +23,5 @@ Public Class TextInputElement
             _text = value
         End Set
     End Property
+
 End Class
